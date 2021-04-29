@@ -1,203 +1,325 @@
-import java.util.* ;
+import java.util.*;
 
-class Main{
-    public static void main(String[] args) {
-        
-    //5-4
-    // boolean b1 = true;
-    // boolean b2 = false;
-
-    // System.out.println("b1 ="+b1);
-    // System.out.println("b2 ="+b2);
-
-//5-5
-    // Scanner sc = new Scanner(System.in);
-
-    // System.out.print("x값:");
-    // int x = sc.nextInt();
-    // System.out.print("y값:");
-    // int y = sc.nextInt();
-    // System.out.print("z값:");
-    // int z = sc.nextInt();
-
-    // double avg = (x+y+z) / 3;
-
-    // System.out.print("x,y,z,의 평균은 "+ avg +"입니다.");
+public class Main {
+    public static void main(String[] args){
     
-//5-6
-    // Scanner sc = new Scanner(System.in);
-
-    // System.out.print("x값:");
-    // int x = sc.nextInt();
-    // System.out.print("y값:");
-    // int y = sc.nextInt();
-    // System.out.print("z값:");
-    // int z = sc.nextInt();
-
-    // double avg = (x+y+z) / 3.0;
-
-    // System.out.print("x,y,z,의 평균은 "+ avg +"입니다.");
-
-//5-7
-    //  int a;
-    // //a = 10.0; 에러
-    // a = (int) 10.0;
-
-    // System.out.println("a = "+ a);
-
-//5-8
+        // Random rand = new Random();
+        // Scanner sc = new Scanner(System.in);
     
-    // System.out.println("float         int");
-    // System.out.println("-----------------");
+        // String[] dayKor = {"일","월","화","수","목","금","토"};
+        // String[] dayEng = {"sun","mon","tue","wed","thu","fri","sat"};
+    
+        // System.out.println("요일명을 영어 소문자로 입력하시오");
+    
+        // int last= -1; // 이전 요일
+        // int retry = 0; 
+        // do {
+        //   int day;
+        //   do {
+        //     day = rand.nextInt(7);
+        //   } while(day == last);
+        //   last = day;
+    
+        //   while (true) {
+        //     System.out.print(dayKor[day]+"요일 : ");
+        //     String s = sc.next();
+    
+        //     if (s.equals(dayEng[day])) break;  //정답일경우
+    
+        //     System.out.println("틀렸습니다. ");
+        //   }
+        //   System.out.print("정답입니다. 다시 한번? 1...Yes/0...No :");
+        //   retry = sc.nextInt();
+        // }while(retry == 1);
+    //6-18
 
-    // float x = 0.0F;
-    // for (int i = 0 ; i <= 1000; i++, x += 0.001F){
-    //    System.out.printf("%10.7f %10.7f\n",x, (float)i/1000);
-// 6-7
+//     Scanner sc = new Scanner(System.in);
+
+//     int[][] a = new int[4][3];
+//     int[][] b = new int[3][4];
+//     int[][] c = new int[4][4];
+
+//     System.out.println("행렬 a의 요소를 입력하세요");
+//     for (int i = 0; i < 4;i++){
+//       for (int j = 0; j < 3;j++) {
+//         System.out.print("a["+i+"]["+j+"] :");
+//         a[i][j] = sc.nextInt();
+//       }
+//     }
+
+//     System.out.println("행렬 b의 요소를 입력하세요");
+//     for (int i = 0; i < 3;i++){
+//       for (int j = 0; j < 4;j++) {
+//         System.out.print("b["+i+"]["+j+"] :");
+//         b[i][j] = sc.nextInt();
+//       }
+//     }
+
+//     for (int i = 0; i < 4;i++){
+//       for (int j = 0; j < 4;j++) {
+//         c[i][j] = 0;
+//         for (int k = 0;k < 3; k++){
+//           c[i][j] += a[i][k] * b[k][j];
+//         }
+//       }
+//     }
+
+//     System.out.println("행렬 a와 b의 곱");
+//     for (int i = 0; i < 4;i++){
+//       for (int j = 0; j < 4;j++) {
+//         System.out.print(c[i][j]+ "  ");
+//       }
+//       System.out.println();
+//     }
+
+//     }
+// }
+// 6-19
 // Scanner sc = new Scanner(System.in);
-// System.out.print("사람 수:");
-// int n = sc.nextInt();
-// System.out.println("점수를 입력하세요");
-//   int[] a = new int[n];
+
+// System.out.println("6명의 국어, 수학 점수를 입력하세요");
+
+// int[][] point = new int[6][2];
+// int[] sumStudent = new int[6];
+// int[] sumSubject = new int[2];
+
+// for (int i = 0; i < 6; i++){
+//   System.out.print(i+1+"번 국어:");
+//   point[i][0] = sc.nextInt();
+//   System.out.print("    수학:");
+//   point[i][1] = sc.nextInt();
+
+//   sumStudent[i] = point[i][0] + point[i][1];//학생점수
+//   sumSubject[0] += point[i][0];   //국어점수합
+//   sumSubject[1] += point[i][1];   //수학점수합
+
+// }
+
+//   System.out.println("No.\t국어\t수학\t평균");
+//   for (int i = 0; i < 6; i++) {
+//     System.out.print((i+1)+"\t"+point[i][0]+"\t\t"+point[i][1]+"\t\t"+(double)sumStudent[i]/2);
+//     System.out.println();
+//   }
+//   System.out.println("평균 "+(double)sumSubject[0]/6+"\t"+(double)sumSubject[1]/6);
+//     }
+// }
+//6-21
+// Scanner sc = new Scanner(System.in);
+
+// System.out.print("학급수 : ");
+// int classNum = sc.nextInt();
+// int[][] point = new int[classNum][];
+// int totNumber = 0;
+
+// for (int i = 0 ; i < point.length ; i ++){
+//   System.out.print(i+1+"반의 학생수 : ");
+//   int num = sc.nextInt();
+
+//   point[i] = new int[num];
+//   totNumber += num;
+
+//   for (int j = 0; j < point[i].length; j++){
+//     System.out.print((i+1) + "반"+ (j+1) +"번의 점수 :");
+//     point[i][j] = sc.nextInt();
+//   }
+// }
+//   System.out.println("  반 |   합계  평균");
+//   System.out.println("----+-----------------");
+//   int total = 0;
+//   for (int i = 0 ; i < point.length; i++) {
+//     int sum = 0;
+//     for (int j = 0; j <point[i].length; j++) {
+//       sum += point[i][j];
+//     }
+//     total += sum;
+//     System.out.printf("%2d반 | %7d %7.1f\n",i+1,sum, (double)sum/point[i].length);
+//   }    
+
+//   System.out.println("----+-----------------");
+//     System.out.printf("  합 | %7d %7.1f\n",total, (double)total/totNumber);
+//     }
+// }
+//7-2
+
+// Scanner sc = new Scanner(System.in);
+// System.out.print("정수 x:");
+// int x = sc.nextInt();
+
+// int s = signOf(x);
+// System.out.println("signOf(x)는"+s+"입니다");
+// }  //main 닫기
+
+// static int signOf(int n){
+//   if (n > 0)
+//     return 1;
+//   else if (n < 0)
+//     return -1;
+//   else 
+//     return 0;
+
+//     Scanner sc = new Scanner(System.in);
+// System.out.print("정수 x:");
+// int x = sc.nextInt();
+
+// int s = signOf(x);
+// System.out.println("signOf(x)는"+s+"입니다");
+// }  //main 닫기
+
+// static int signOf(int n){
+//   if (n > 0)
+//     return 1;
+//   else if (n < 0)
+//     return -1;
+//   else 
+//     return 0;
+// }
+// }
+//7-6
+// Scanner sc = new Scanner(System.in);
+// System.out.println("1부터 x까지의 합을 구하세요"); 
+// System.out.print("x의 값:"); int x = sc.nextInt();
+// System.out.print("1부터 "+x+"의 합은"+sumUp(x)+"입니다."); 
+
+//   }
+
+// static int sumUp(int n){
 //   int sum = 0;
+//   for (int i = 1; i <= n ; i ++)
+//     sum+=i;
+//   return sum;
+//7-7
+// Scanner sc = new Scanner(System.in);
+// System.out.println("왼쪽 아래가 직각인 이등변 삼각형을 표시합니다. "); 
+// System.out.print("단수는:"); int n = sc.nextInt();
 
-//   for (int j = 0; j < n ; j++){
-//     System.out.print(j + "번의 점수 :");
-//     a[j]= sc.nextInt();
-//     sum += a[j];
+// for (int i = 1;i <= n ; i++) {
+//     putStart(i);
+//     System.out.println();
 //   }
+// }// main 
+  
+// static void putStart(int n){
+//   putChars('*',n);
+// }
 
-//   int max = a[0];
-//   int min = a[0];
-//   for (int i = 1 ; i <n ; i++) {
-//     if (a[i] > max) max = a[i];
-//     if (a[i] < min) min = a[i];       
+// static void putChars(char c, int n) {
+//   while(n-- > 0)
+//     System.out.print(c);
+// }
+//     static int random(int a, int b){
+//       if (b <= a) {
+//         return a;
+//       }else{
+//         Random rand = new Random();
+//         return a + rand.nextInt(b-a+1);
+//       }
+  
+// Scanner sc = new Scanner(System.in);
+// int x;
+// do{
+//   int n = readPlusInt();
+
+//   System.out.print("반대로 읽으면 ");
+//   while(n>0){
+//     System.out.print(n%10);
+//     n = n / 10;
 //   }
+//   System.out.println("입니다");
 
+//   do {
+//     System.out.print("다시 한 번?<Yes...1/No...0>");
+//     x=sc.nextInt();
+//   }while (x!=0 && x!=1);
+// }while(x==1);
 
-// System.out.println("합계는 " + sum + "입니다");
-// System.out.println("평균은 " + (double)sum / n + "입니다");
-// System.out.println("최고점은 " + max + "입니다");
-// System.out.println("최저점은 " + min + "입니다");
+// } // main  닫기
 
-//6-12
+// static int readPlusInt() {
+//   Scanner sc = new Scanner(System.in);
+//   int x;
+//   do {
+//     System.out.print("양의 정수값:");
+//     x = sc.nextInt();
+//   } while(x <=0);
+//   return x;
 
-// Random rand = new Random();
-//     Scanner sc = new Scanner(System.in);
-//     System.out.print("요소 수:");
-//     int n = sc.nextInt();
-//     int[] a = new int[n];
-
-//       for (int j = 0; j < n ; j++){
-//         a[j]= 1+ rand.nextInt(10);
-//       }
-      
-//       for (int j = 0; j < n ; j++){
-//           System.out.println("a["+j+"] = " + a[j]);
-//       }
-
-//6-13
-// Random rand = new Random();
-//     Scanner sc = new Scanner(System.in);
-
-//     int n = 0;
-//     do {
-//       System.out.print("요소 수:");
-//       n = sc.nextInt();
-//     }while(n>10);
-
-//     int[] a = new int[n];
-
-//     //a[0]= 1+ rand.nextInt(10);
-
-//       for (int i = 0; i < n ; i++){
-//         int j;
-//         do {
-//           j = 0;
-//           a[i] = 1+ rand.nextInt(10);
-//             for (j = 0 ; j < i ; j++){
-//               if (a[j] == a[i]) break;
-//             }
-//         } while(j < i);
-//       }
-//       for (int j = 0; j < n ; j++){
-//           System.out.println("a["+j+"] = " + a[j]);
-//       }
-
-// 6-14
-// Random rand = new Random();
-//     Scanner sc = new Scanner(System.in);
-//     System.out.print("요소 수:");
-//     int n = sc.nextInt();
-//     int[] a = new int[n];
-
-//       for (int j = 0; j < n ; j++){
-//         System.out.print("a["+j+"] = ");
-//         a[j]= sc.nextInt();
-//       }
-
-//     System.out.println("요소를 섞었습니다.");
-
-//       for (int i = 0 ; i < n ; i++) {
-//         int x = rand.nextInt(n);
-//         int y = rand.nextInt(n);
-//         int t = a[x];
-//         a[x] = a[y];
-//         a[y] = t;
-//       }
-
-//       for (int j = 0; j < n ; j++){
-//           System.out.println("a["+j+"] = " + a[j]);
-//       }
-
-    //   Random rand = new Random();
-    // Scanner sc = new Scanner(System.in);
-    // System.out.print("요소 수:");
-    // int n = sc.nextInt();
-    // int[] a = new int[n];
-    // int[] b = new int[n];
-    //   for (int j = 0; j < n ; j++){
-    //     System.out.print("a["+j+"] = ");
-    //     a[j]= sc.nextInt();
-    //   }
-
-    //   for (int i = 0; i < n ; i++){
-    //     b[i] = a[n-i-1]; 
-    //   }
-
-    //   for (int j = 0; j < n ; j++){
-    //       System.out.println("b["+j+"] = " + b[j]);
-    //   }
-
-    Scanner sc = new Scanner(System.in);
-    Random rand = new Random();
-    
-    String months[] = {  
-      "January", "February", "March", "April", 
-      "May","June","July","August",
-      "September","October","November","December"
-  };
-    int re = 0;
-
-    System.out.println("해당 월의 영어 단어를 입력하시오");
-    System.out.println("첫 글자는 대문자, 나머지는 소문자로 입력하세요.");
-    
-    do{
-    int month = 1 + rand.nextInt(12);
+//7-10
   
-    while(true){
-    System.out.print(month + "월:");
-    String s = sc.next();
+// Scanner sc = new Scanner(System.in);
+// Random rand = new Random();
 
-    if (s.equals(months[month-1])) break; 
-      System.out.println("틀렸습니다.");
-    }  
-      System.out.print("정답입니다.");
-      System.out.print("다시 한번? 1....Yes / 0....No: ");
-      re =  sc.nextInt();
-  
-    }while(re == 1);
+// System.out.println("암산 훈련!!");
 
-    }
+// do {
+
+//   //난수 발생
+//   int x = rand.nextInt(900) + 100;//3자리수
+//   int y = rand.nextInt(900) + 100;
+//   int z = rand.nextInt(900) + 100;
+//   int p = rand.nextInt(4);        //문제 유형
+
+//   int answer = 0;
+//   switch (p){
+//     case 0: answer = x + y + z; break;
+//     case 1: answer = x + y - z; break;
+//     case 2: answer = x - y + z; break;
+//     case 3: answer = x - y - z; break;
+
+// }while(true){
+//   System.out.print(x + ((p<2) ? "+":"-")+y+((p%2==0) ? "+":"-")+z+"=");
+//   int k = sc.nextInt();
+//   if (k==answer)
+//     break;
+//   System.out.println("틀렸습니다.");
+// }
+
+// }while(retry());
+//   } // main end
+
+// static boolean retry() {
+//   Scanner sc = new Scanner(System.in);
+//   int cond;
+//   do {
+//     System.out.print("다시 한 번?<Yes...1/No...0> :");
+//     cond = sc.nextInt();
+//   }while (cond != 0 && cond != 1);
+//   return cond == 1;
+//7-19
+
+Scanner sc = new Scanner(System.in);
+
+System.out.println("요소수");
+int n = sc.nextInt();
+int[] a = new int[n];
+
+for (int i = 0; i <n; i++){
+  System.out.print("a["+i+"] : ");
+  a[i] = sc.nextInt();
 }
 
+System.out.print("삭제를 시작할 인덱스 : ");
+int d = sc.nextInt();
+System.out.print("삭제할 요소의 개수 : ");
+int e = sc.nextInt();
+
+aryRmv(a, d, e);
+
+for (int i = 0; i < n; i++){
+  System.out.println("a["+i+"] = "+a[i]);
+} 
+
+}//main 닫기
+
+static void aryRmv(int[] a, int d, int e){
+  if (e > 0 && d >= 0 && d+e < a.length){
+    int d2 = d + e - 1;
+    if (d2 > a.length - e - 1)
+    d2 = a.length-e-1;
+    for(int i = d; i <= d2; i++){
+      a[i] = a[i+e];
+    }
+  }
+}
+
+
+}
