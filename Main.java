@@ -1,5 +1,7 @@
 import java.util.*;
 
+import org.w3c.dom.NameList;
+
 public class Main {
     public static void main(String[] args){
     
@@ -286,40 +288,339 @@ public class Main {
 //   return cond == 1;
 //7-19
 
-Scanner sc = new Scanner(System.in);
+// Scanner sc = new Scanner(System.in);
 
-System.out.println("요소수");
-int n = sc.nextInt();
-int[] a = new int[n];
+// System.out.println("요소수");
+// int n = sc.nextInt();
+// int[] a = new int[n];
 
-for (int i = 0; i <n; i++){
-  System.out.print("a["+i+"] : ");
-  a[i] = sc.nextInt();
-}
+// for (int i = 0; i <n; i++){
+//   System.out.print("a["+i+"] : ");
+//   a[i] = sc.nextInt();
+// }
 
-System.out.print("삭제를 시작할 인덱스 : ");
-int d = sc.nextInt();
-System.out.print("삭제할 요소의 개수 : ");
-int e = sc.nextInt();
+// System.out.print("삭제를 시작할 인덱스 : ");
+// int d = sc.nextInt();
+// System.out.print("삭제할 요소의 개수 : ");
+// int e = sc.nextInt();
 
-aryRmv(a, d, e);
+// aryRmv(a, d, e);
 
-for (int i = 0; i < n; i++){
-  System.out.println("a["+i+"] = "+a[i]);
-} 
+// // for (int i = 0; i < n; i++){
+// //   System.out.println("a["+i+"] = "+a[i]);
+// // } 
 
-}//main 닫기
+// // }//main 닫기
 
-static void aryRmv(int[] a, int d, int e){
-  if (e > 0 && d >= 0 && d+e < a.length){
-    int d2 = d + e - 1;
-    if (d2 > a.length - e - 1)
-    d2 = a.length-e-1;
-    for(int i = d; i <= d2; i++){
-      a[i] = a[i+e];
+// // static void aryRmv(int[] a, int d, int e){
+// //   if (e > 0 && d >= 0 && d+e < a.length){
+// //     int d2 = d + e - 1;
+// //     if (d2 > a.length - e - 1)
+// //     d2 = a.length-e-1;
+// //     for(int i = d; i <= d2; i++){
+// //       a[i] = a[i+e];
+// //     }
+// //   }
+// // class Humen{
+// //   String name;
+// //   int hright;
+// //   int weight;
+
+// class Period {
+//   //변수
+//   private Day from; //시작일
+//   private Day to;   //종료일
+
+//   // 생성자
+//   public Period(Day form, Day to){
+//     this.from = new Day(from);
+//     this.to = new Day(to);
+  
+//   // 매서드
+//   public Day getFrom() {return new Day(from);}
+//   public Day getTo()   {return new Day(to);}
+
+//   public String toString() {
+//     return "{" + from + "~" + to + ")";
+//   }
+//   }
+
+
+// class Main {
+//   public static void main(String[] args){
+//     Period taejo = new Period(new Day(1392,8,5), new Day(1398,10,14));
+
+//     System.out.println("태조 = "+ taejo);
+//   }
+
+//   Scanner sc = new Scanner(System.in);
+
+//   System.out.print("실수값:");
+//   double x = sc.nextDouble();
+
+//   System.out.println("절댓값:" + Math.abs(x));
+//   System.out.println("제곱근:" + Math.sqrt(x));
+//   System.out.println("면  적:" + Math.PI*x*x);
+
+// }
+// class Main {
+  //2개중 최소값 찾기 매서드  (매서드 오버로딩)
+//   public static int min(int a, int b) {
+//     return a < b ? a : b;
+//   }
+//   public static int max(int a, int b) {
+//    return a > b ? a : b;
+//   }
+//   public static int min(int a, int b, int c) {
+//    int min = a;
+//    if(b<a) min=b;
+//    if(c<min) min=c;
+//    return min;
+//   }
+//   public static int max(int a, int b, int c) {
+//    int max = a;
+//    if(b>max) max=b;
+//    if(c>max) max=c;
+//    return max;
+//   }
+//   public static void main(String[] args){
+//     Scanner sc = new Scanner(System.in);
+
+//     System.out.print("x값:");int x = sc.nextInt();
+//     System.out.print("y값:");int y = sc.nextInt();
+//     System.out.print("z값:");int z = sc.nextInt();
+
+//     System.out.print("x,y의 최소값은 "+ min(x,y+'입니다.');
+//     System.out.print("x,y의 최소값은 "+ min(x,y+'입니다.');
+//     System.out.print("x,y의 최소값은 "+ min(x,y+'입니다.');
+//     System.out.print("x,y의 최소값은 "+ min(x,y+'입니다.');
+//   }
+    
+// }
+//13-1
+// abstract class Animal{
+//   String name;
+//   public Animal(String name){
+//     this.name = name;
+//   }
+//   public abstract void bark();
+
+//   public String getName(){
+//     return name;
+//   }
+
+// }
+// class Dog extends Animal{
+//   String type;
+//   public Dog(String name, String type){
+//     super(name);this.type = type;
+
+//   }
+//   public void bark(){
+//     System.out.println("멍멍!");
+
+//   }
+// }
+// class Cat extends Animal{
+//   int age;
+//   public Cat(String name, int age){
+//     super(name);this.age = age;
+//   }
+//   public void bark(){
+//     System.out.println("냐옹!");
+//   }
+// }
+//   Animal [] a = new Animal[2];
+//   a[0] =  new Dog("뭉치", "치와와");
+//   a[1] = new Cat("마이클",7);
+
+//   System.out.print(a[0].getName()+" ");
+//   a[0].bark();
+//   System.out.print(a[1].getName()+" ");
+//   a[1].bark();
+
+// abstract class Animal{
+//   String name;
+//   public Animal(String name){
+//     this.name = name;
+//   }
+//   public abstract void bark();
+
+//   public String getName(){
+//     return name;
+//   }
+
+// }
+// class Dog extends Animal{
+//   String type;
+//   public Dog(String name, String type){
+//     super(name);this.type = type;
+
+//   }
+//   public void bark(){
+//     System.out.println("멍멍!");
+
+//   }
+// }
+// class Cat extends Animal{
+//   int age;
+//   public Cat(String name, int age){
+//     super(name);this.age = age;
+//   }
+//   public void bark(){
+//     System.out.println("냐옹!");
+//   }
+// }
+//   Animal [] a = new Animal[2];
+//   a[0] =  new Dog("뭉치", "치와와");
+//   a[1] = new Cat("마이클",7);
+
+//   System.out.print(a[0].getName()+" ");
+//   a[0].bark();
+//   System.out.print(a[1].getName()+" ");
+//   a[1].bark();
+// }
+// }
+
+// // 13-1
+
+// abstract class Animal{
+//   private String name;
+//   public Animal(String name){
+//   this.name = name;
+//   }
+//   public abstract void bark();
+
+//   public String getName() {
+//     return name;
+//   }
+//   public void introduce() {
+//     System.out.print(toString()+"이다. ");
+//     bark();
+
+//   }
+  
+// }
+
+// class Dog extends Animal{
+//   private String type;  //개 종류
+//   public Dog(String name, String type){ // 생성자
+//     super(name);this.type = type;
+//   }
+//   public void bark() {
+//     System.out.println("멍멍!");  //짖기
+//   }
+//   public String toString() {
+//     return type + "의 "+getName();
+//   }
+
+// }
+
+// class Cat extends Animal{
+//   int age;                          // 고양이의 나이
+//   public Cat(String name, int age){ // 생성자
+//     super(name);this.age = age;
+//   }
+//     public void bark() {             //짖기
+//     System.out.println("냐옹!");
+//   }
+//     public String toString() {
+//     return age + "의 "+getName();
+//   }
+
+
+// }
+// class Main{
+// public static void main(String[] args){
+//   // Animal x = new Animal(); // 추상 클래스는 인스턴스르 생성할 수 없다. 
+
+//   Animal[] a = new Animal[2];
+//   a[0] = new Dog("뭉치"
+
+// //13-5 13- 6
+
+// abstract class Player {
+//   int hand; //손 (가위 바위 보)
+// }
+
+// // 사람 손
+// class Human extends Player {
+//   Scanner sc = new Scanner(System.in);
+
+//   public int humanHand(){
+//   do {
+//     System.out.print("가위바위보!!!0...바위/1...가위/2...보");
+//     hand = sc.nextInt();
+//   }while(hand < 0 || hand > 2);
+//   return hand;
+//   }
+// }
+
+// // 컴퓨터 손
+
+// class Computer extends Player {
+//   Random rand = new Random();
+
+//   public int ComputerHand() {
+//     return rand.nextInt(3);
+//   }
+// }
+
+
+//     Human hp = new Human();
+//     Computer cp = new Computer();
+//     String[] hands = {"가위","바위","보"};
+
+//     int humanHand = hp.humanHand();
+//     int computerHand = cp.ComputerHand();
+
+//     System.out.println("나는 "+hands[humanHand]+"이고, 당신은"+hands[computerHand]+"입니다. ");
+//     System.out.println(rkc(computerHand, humanHand));
+//   }
+// public static String rkc(int com, int per){
+//   if((com - per == -1) || (com - per == 2))
+//   return "당신이 졌습니다.";
+
+//   else if(com - per == 0)
+//   return "비겼습니다.";
+
+//   else
+//   return "당신이 이겼습니다.";
+// }
+
+// }
+
+// Scanner sc = new Scanner(System.in);
+
+// System.out.print("문자열:");
+//   String s = sc.next();
+//   System.out.print("반대로 읽으면 ");
+//   for(int i = s.length()-1 ; i >= 0;i--){
+//   System.out.print(s.charAt(i));
+//   }
+//   System.out.print("입니다. ");
+
+
+    Scanner sc = new Scanner(System.in);
+    System.out.print("문자열 s1:");
+    String s1 = sc.next();
+    System.out.print("문자열 s2:");
+    String s2 = sc.next();
+  
+    int idx = s1.indexOf(s2);
+    if (idx==-1)
+      System.out.println("s1안에 s2가 포함되어있지 않습니다. ");
+    else{
+          System.out.println(s1);
+          System.out.println(idx);
+  
+  
     }
+  
   }
-}
+  }
 
 
-}
+  
+
+  
